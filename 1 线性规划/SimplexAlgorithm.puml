@@ -1,0 +1,39 @@
+@startuml
+
+class SimplexAlgorithm {
+    - A: matrix
+    - b: column
+    - c: column
+    - minmax: str
+    - n: int
+    - xn: int
+    - result: int
+    - sign: str
+    - value: float
+    - xresult: column
+    + __init__()
+    + inputConstrainit()
+    + inputTarget()
+    + printExpression()
+    + transToStd()
+    - getC_B(x_b)
+    - getC_N(c_b)
+    - calcTheta(c_n)
+    - transBase(c_n, theta)
+    - transX_B(c_n, theta, x_b)
+    - getBestValue(c_b)
+    - judge(c_n, c_b)
+    + simplexAlgorithm()
+    - printExcel(c_b, x_b, theta, c_n)
+    - printResult(x_b)
+}
+
+enum sign {
+    LT: <
+    LE: <=
+    EQ: =
+    GE: >=
+    GT: >
+}
+
+@enduml
